@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+    html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: url("bg.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+   .top{
+      border: solid 5px rgb(226, 225, 225);
+      border-radius: 8px;
+      margin-top: 0px;
+      margin-right: 400px;
+      margin-left: 450px;
+      padding-left: 20px;
+      padding-bottom: 30px;
+      background-color: rgb(226, 225, 225);
+   }
+   .forms{
+       margin: 13px;
+   }
+   .email-id{
+       margin:15px;
+   }
+   .forms_pass{
+       margin-left: 13px;
+   }
+   .forms2{
+    margin-left: 18px;
+   }
+   #signup{
+       text-align: center;
+       padding: 40px;
+       color: -webkit-linear-gradient(left, #a445b2, #fa4299);
+   }
+   input[type=email]{
+       margin-left: 50px;
+   }
+   input[type=text]{
+       margin-left: 14px;
+   }
+   .ways{
+       text-align: center;
+       margin-top: 50px;
+   }
+   .buttons{
+       border-radius: 10px;
+       padding-top: 6px;
+    padding-bottom: 6px;
+       padding-left: 130px;
+       padding-right: 130px;
+       margin-top: 12px;
+       margin-right: 15px;
+       cursor: pointer;
+       background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+   }
+   .login{
+       padding: 4px 6px 10px 70px;
+       font-family: 'Poppins';
+       font-size: 30px; 
+   }
+   .signup-link{
+       margin-top: 3px;
+   }
+   .images img{
+       border-radius: 4000px;
+       height: 30px;
+       margin-top: 5px;
+   }
+   input:focus{
+       background-color:rgb(179, 179, 179);
+   }
+</style>
+<body>
+    <div class="top">
+        <div class="title-text">
+            <div class="login">
+               Sign Up Form
+            </div>
+         </div>
+
+        <form class="forms">
+            <label>Username:
+              <input type="text" placeholder="Example: john_19" required onfocus="this.placeholder = ''">
+            </label>
+        </form>
+        <form class="email-id">
+            <label>Email: 
+                <input class="box" type="email" placeholder="john@example.com" required onfocus="this.placeholder = ''">
+              </label>
+        </form>
+        <form class="forms_pass">
+            <lable>Password:
+                <input class="forms2" type="password" placeholder="Password" required onfocus="this.placeholder = ''">
+            </lable>
+        </form>
+        <div class="forms">(Atleast 8 characters)</div>
+        <form>
+            <input type="checkbox" required> I agree the Terms and CONDITIONS
+        </form>
+        <!--<div class="signup-link">
+            Not a member? <a href="">Signup now</a>
+        </div>-->
+        <button class="buttons" onclick="alert('Welcome to KayByKatty....Happy Shopping :)')">Sign up
+        </button>
+        <div class="ways">
+          Sign in using
+          <div class="images">
+              <img src="\google-logo.png">
+              <img src="\WebDev images\fb.jpg">
+          </div>
+        </div>
+    </div>
+
+    <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+    </script>
+</body>
+</html>
