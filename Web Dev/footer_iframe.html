@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Inframe </title>
+<style>
+.column{
+  float:left;
+  width: 33%;
+  height: 100px;
+}
+.row:after{
+  content: ""
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+  <!--TOP OF MAIN WEBPAGE-->
+  <div class="row">
+  <div class="column">
+    <img src="WebDev images\eemail.jpg" height="25px" width="25px" style="padding-left:30px">&nbsp
+    <span style="font-size: 15px; color:white;"> GET SPECIAL DISCOUNT IN YOUR INBOX </span>
+    <p>&nbsp
+    <form>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <input type="email" id="email" placeholder="Enter Your Email-Id"></input>
+    &nbsp&nbsp
+    <button type="button" onclick="alert('Your Email-Id is Sent')">Send</button>
+    </form></p>
+  </div>
+  <div class="column">
+    <span style="font-size: 15px; color:white; padding-left: 60px"> EXPERIENCE THE
+    <span style="font-size: 20px; ">  KayByKatty</span> APP </span>
+    <p> <img src="WebDev images\foot.png" height="100px" width="300px" style="padding-left: 40px"></p>
+  </div>
+  <div class="column">
+    <img src="WebDev images\foot1.png" height="100px" width="300px" style="padding-left: 50px">
+  </div>
+  </div>
+</body>
+</html>
